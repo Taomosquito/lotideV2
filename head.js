@@ -2,7 +2,7 @@
 // * Array into the new function as a parameter.
 // * Setup to have  a test always return undefined.
 
-// OUTPUT: 
+// OUTPUT:
 // * First Index of the input array.
 // * Get undefined for an empty array.
 
@@ -27,5 +27,5 @@ const head = function(arr) {
 
 // TESTING BELOW:
 assertEqual(head([5, 6, 7]), 5); // tests its ability to work on an array of numbers.
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"); // Tests its abiliy to work on an array of strings 
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"); // Tests its abiliy to work on an array of strings
 assertEqual(head([]), undefined); //checks that no value will return undefined.
