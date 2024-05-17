@@ -12,10 +12,16 @@
 
 // FUNCTION IMPLEMENTATION BELOW:
 const assertEqual = function(actual, expected) {
-
+  if (actual === expected) {
+    console.log(`✔ ✔ ✔ ✔ ✔ Assertion Passed: ${actual} === ${expected}`);
+  };
+  if (actual !== expected) {
+    console.log(`❌❌❌❌❌Assertion Failed: ${actual} !== ${expected}`);
+  };
 };
 
 // TESTING CODE:
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 assertEqual("test", "test");
+assertEqual(1, 2);
