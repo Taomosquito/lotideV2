@@ -34,8 +34,6 @@ const altResult1 = tail(result1);
 const altResult2 = tail(result2);
 const altResult3 = tail(result3);
 
-assertEqual(result1[0], result1[0]);
-
 // TESTING BELOW:
 assertEqual(altResult1[0], result1[1]); // Check that result1 has the same 1 index as 0 index of tail(result1).
 assertEqual(altResult2[0], result2[1]); // Check that result2 has the same 1 index as 0 index of tail(result1).
