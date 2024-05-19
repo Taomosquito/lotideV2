@@ -45,13 +45,15 @@ const without = function(source, itemsToRemove) {
 };
 
 // TESTING SETUP BELOW:
-testArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(without(testArray, [1, 2, 3]));
+testArray1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+testArray2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+shortTestArray1 = [1, 2, 3, 4, 5];
+shortTestArray2 = ["1", "2", "3", "4", "5"];
 
-for (let i = 0; i < array.length; i++) {
-  let sample = [];
-  const arrayItem = array[i]
-  if (arrayItem === 2) {
-    sample.push(arrayItem)
-  }
-}
+// TESTING BELOW:
+assertArraysEqual(without(testArray1, shortTestArray1), [6, 7, 8, 9, 10]);
+assertArraysEqual(without(testArray2, shortTestArray2), ["6", "7", "8", "9", "10"]);
+assertArraysEqual(without(testArray1, [1, 2, 3, 4, 5]), [6, 7, 8, 9, 10]);
+assertArraysEqual(without(testArray1, [6, 7, 8, 9, 10]), [1, 2, 3, 4, 5]);
+assertArraysEqual(without(["are", "you", "testing"], ["are", "you"]), ["testing"]);
+assertArraysEqual(without([], []), []);
