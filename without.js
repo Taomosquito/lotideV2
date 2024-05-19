@@ -40,7 +40,12 @@ const assertArraysEqual = function(arr1, arr2) {
 
 // without FUNCTION IMPLEMENTATION BELOW:
 const without = function(source, itemsToRemove) {
-  let newArray = source.filter(item => !itemsToRemove.includes(item));
+  let newArray = [];
+  for (let i = 0; i < source.length; i++) {
+    const item = source[i];
+    if (!itemsToRemove.includes(item))
+      newArray.push(item)
+  }
   return newArray;
 };
 
@@ -57,3 +62,4 @@ assertArraysEqual(without(testArray1, [1, 2, 3, 4, 5]), [6, 7, 8, 9, 10]);
 assertArraysEqual(without(testArray1, [6, 7, 8, 9, 10]), [1, 2, 3, 4, 5]);
 assertArraysEqual(without(["are", "you", "testing"], ["are", "you"]), ["testing"]);
 assertArraysEqual(without([], []), []);
+
