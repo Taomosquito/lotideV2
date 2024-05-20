@@ -40,6 +40,9 @@ const assertArraysEqual = function(arr1, arr2) {
 const middle = function(arr) {
   let newArr = [];
   let middleBuilder = Number(Math.floor(arr.length / 2));
+  if (arr.length < 3) {
+    return newArr;
+  }
   if (arr.length % 2 === 0) {
     newArr.push(arr[middleBuilder]);
     newArr.unshift(arr[middleBuilder - 1]);
