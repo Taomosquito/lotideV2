@@ -7,16 +7,6 @@
 // * Return true on a perfect match.
 // * Return false on a perfect match.
 
-// DETAILS:
-// * Guided through 10 steps.
-// ** Step 1 done.
-// ** Step 2 done.
-// ** Step 3 done.
-// ** Step 4 done.
-// ** Step 5 done.
-// ** Step 6 done.
-// ** Step 7 done.
-
 //***// IMPLEMENTATION STAGE BELOW: //***//
 // assertEqual FUNCTION IMPLEMENTATION BELOW:
 const assertEqual = function(actual, expected) {
@@ -51,7 +41,13 @@ const eqObjects = function(object1, object2) {
   const object1K = Object.keys(object1);
   for (let i = 0; i < object1K.length; i++) {
     const sourceKey = object1K[i];
-    if (object1[sourceKey] !== object2[sourceKey]) {
+    if (Array.isArray(object1[sourceKey]) && Array.isArray(object2[sourceKey])) {
+      const arraysAreEqual = eqArrays(object1[sourceKey], object2[sourceKey]);
+
+      if (!arraysAreEqual) {
+        return false;
+      }
+    } else if (object1[sourceKey] !== object2[sourceKey]) {
       return false;
     }
   }
