@@ -31,7 +31,7 @@ const findKeyByValue = function(object, value) {
 };
 
 // TESTING SET-UP:
-sampleObject = {
+const sampleObject = {
   a: 0,
   b: 1,
   c: 2,
