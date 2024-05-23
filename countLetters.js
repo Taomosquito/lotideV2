@@ -27,11 +27,7 @@ const countLetters = function(sentence) {
       if (result[letter] === undefined) {
         result[letter] = 0;
       }
-      if (sentence.includes(letter)) {
-        result[letter] += 1;
-      } else {
-        result[letter] = 1;
-      }
+      result[letter] += 1;
     }
   }
   return result;
