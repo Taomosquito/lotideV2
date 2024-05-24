@@ -48,14 +48,19 @@ const eqObjects = function(object1, object2) {
 };
 
 // assertObjectsEqual FUNCTION IMPLEMENTATION BELOW:
-const assertObjectsEqual = function(actual, expected) {
+const assertObjectsEqual = function(actual, expected, verbose = false) {
   const inspect = require("util").inspect;
-  if (eqObjects(actual, expected)) {
-    // console.log(`✔ ✔ ✔ ✔ ✔ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
-    console.log(`✔ ✔ ✔ ✔ ✔ Assertion Passed: first object === second object`);
+  if (verbose) {
+    if (eqObjects(actual, expected)) {
+      console.log(`✔ ✔ ✔ ✔ ✔ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+    } else {
+      console.log(`❌❌❌❌❌Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+    }
   } else {
-    // console.log(`❌❌❌❌❌Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
-    console.log(`❌❌❌❌❌Assertion Failed: first object !== second object`);
+    if (eqObjects(actual, expected)) {
+      console.log(`✔ ✔ ✔ ✔ ✔ Assertion Passed: first object === second object`);
+    } else
+      console.log(`❌❌❌❌❌Assertion Failed: first object !== second object`);
   }
 };
 
@@ -294,3 +299,4 @@ assertObjectsEqual(sampleObjectaz025V1N, sampleObjectaz025V2N);
 assertObjectsEqual(sampleObjectaz025V1S, sampleObjectaz025V2S);
 assertObjectsEqual(sampleObjectaz025V1N, sampleObjectak010V1N);
 assertObjectsEqual(sampleObjectTerriblePhoneticAlphabetV1A, sampleObjectTerriblePhoneticAlphabetV2A);
+assertObjectsEqual({ a: 1, b: 1, c: 1 }, { c: 1, b: 1, a: 1 }, true);
