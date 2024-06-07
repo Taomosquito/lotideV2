@@ -54,6 +54,8 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+module.exports = eqObjects;
+
 //***// TESTING STAGE BELOW: //***//
 // TESTING SET-UP BELOW:
 const sampleObjectaz025V1N = {

@@ -2,6 +2,8 @@
 // * Takes a parameter for an object.
 // * Takes a parameter for a value to search for.
 
+const findKey = require("./findKey");
+
 // OUTPUT:
 // * Return the first key in the given object that which contains the given value.
 
@@ -29,6 +31,8 @@ const findKeyByValue = function(object, value) {
   }
   return undefined;
 };
+
+module.exports = findKeyByValue;
 
 // TESTING SET-UP:
 const sampleObject = {

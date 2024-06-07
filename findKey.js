@@ -30,6 +30,8 @@ const findKey = function(object, callback) {
   return undefined;
 };
 
+module.exports = findKey;
+
 // TESTING SET-UP:
 const sampleObject = {
   a: 0,

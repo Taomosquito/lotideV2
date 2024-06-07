@@ -50,6 +50,8 @@ const without = function(source, itemsToRemove) {
   return newArray;
 };
 
+module.exports = without;
+
 // TESTING SETUP BELOW:
 testArray1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 testArray2 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];

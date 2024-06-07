@@ -64,6 +64,8 @@ const assertObjectsEqual = function(actual, expected, verbose = false) {
   }
 };
 
+module.exports = assertObjectsEqual;
+
 //***// TESTING STAGE BELOW: //***//
 // TESTING SET-UP BELOW:
 const sampleObjectaz025V1N = {

@@ -28,6 +28,8 @@ const takeUntil = function(array, callback) {
   return newArr;
 };
 
+module.exports = takeUntil;
+
 // eqArrays FUNCTION IMPLEMENTATION BELOW:
 const eqArrays = function(arr1, arr2) {
   if (!Array.isArray(arr1) || !Array.isArray(arr2)) {

@@ -34,6 +34,8 @@ const countOnly = function(allItems, itemsToCount) {
   return results;
 };
 
+module.exports = countOnly;
+
 // TESTING SET-UP:
 // First Testing Consideration:
 const colorTest = [

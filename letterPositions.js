@@ -53,6 +53,8 @@ const letterPositions = function(sentence) {
   return result;
 };
 
+module.exports = letterPositions;
+
 // TESTING SETUP BELOW:
 const sampleSentence1 = "SSS";
 const sampleSentence2 = "Lighthouse";

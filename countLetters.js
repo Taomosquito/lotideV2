@@ -33,6 +33,8 @@ const countLetters = function(sentence) {
   return result;
 };
 
+module.exports = countLetters;
+
 //***// TESTING STAGE BELOW: //***//
 // TESTING SET-UP BELOW:
 sampleStr1 = 'LHL'
